@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+/*
+
+Bir route tanımladıktan sonra,
+get ve post ile hangi işlemi yapmak istediğimizi seçmemiz gerekiyor. Biz bu örnekte get işlemlerini yapacağız.
+retrun 'Merhaba Laravel' tarayıcıyı açtığımız zaman ekranda gösterilecek olan yazıyı simgeliyor.
+
+Route::get('/', function(){
+    return 'Merhaba Laravel'; 
 });
+*/
+
+
+Route::resource('users', UsersController::class); 
