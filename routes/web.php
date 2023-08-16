@@ -28,3 +28,5 @@ Route::get('/', function(){
 
 
 Route::resource('users', UsersController::class); 
+
+//*Yeni Bir Route eklemek için yukarıda izlediğimiz yolu izlememiz gerekem
